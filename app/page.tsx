@@ -234,6 +234,9 @@ export default function Page() {
           key: encryptedKey
         }
       ];
+
+      let uploadedFileId: number | null = null;
+
       const tx = await dataRegistryContract.addFileWithPermissions(
         encryptedDataUrl as any,
         walletAddress as any,
@@ -252,38 +255,38 @@ export default function Page() {
           });
 
           if (decodedLog && decodedLog.args) {
-            const fileId = decodedLog.args[0];
+            uploadedFileId = Number(decodedLog.args[0]);
             const owner = decodedLog.args[1];
             const url = decodedLog.args[2];
 
-            console.log("File ID:", fileId);
+            console.log("File ID:", uploadedFileId);
             console.log("Owner:", owner);
             console.log("URL:", url);
 
-            setFileId(Number(fileId));
+            setFileId(uploadedFileId);
           }
         }
       }
-      appendStatus(`File added to DataRegistry contract with permissions, file id is '${fileId}'. Requesting TEE fees from the TeePool contract...`);
+      appendStatus(`File added to DataRegistry contract with permissions, file id is '${uploadedFileId}'. Requesting TEE fees from the TeePool contract...`);
 
       setUploadState("done");
-      console.log(`File uploaded with ID: ${fileId}`);
+      console.log(`File uploaded with ID: ${uploadedFileId}`);
 
       const teeFee = await teePoolContract.teeFee();
       const teeFeeInVana = ethers.formatUnits(teeFee, 18);
       appendStatus(`TEE fee fetched: ${teeFeeInVana} VANA for running the contribution proof on the TEE`);
 
-      appendStatus(`Requesting contribution proof from TEE for FileID: ${fileId}...`);
+      appendStatus(`Requesting contribution proof from TEE for FileID: ${uploadedFileId}...`);
       const contributionProofTx = await teePoolContract.requestContributionProof(
-        fileId as any,
+        uploadedFileId as any,
         { value: teeFee } as any
       );
       const contributionProofReceipt = await contributionProofTx.wait();
       appendStatus(`Contribution proof requested. Transaction hash: ${contributionProofReceipt?.hash}`);
 
-      const jobIds = await fileJobIds(teePoolContract, fileId as number);
+      const jobIds = await fileJobIds(teePoolContract, uploadedFileId as number);
       const latestJobId = jobIds[jobIds.length - 1] as number;
-      appendStatus(`Latest JobID for FileID ${fileId}: ${latestJobId}`);
+      appendStatus(`Latest JobID for FileID ${uploadedFileId}: ${latestJobId}`);
 
       const jobDetails = await getTeeDetails(teePoolContract, latestJobId);
       appendStatus(`Job details retrieved for JobID ${latestJobId}`);
@@ -305,7 +308,7 @@ export default function Page() {
           },
           body: JSON.stringify({
             job_id: latestJobId,
-            file_id: fileId,
+            file_id: uploadedFileId,
             nonce: "1234",
             encryption_key: signature,
             proof_url:
@@ -329,7 +332,7 @@ export default function Page() {
         `Contribution proof response received from TEE. Requesting a reward...`
       );
 
-      const requestClaimTx = await dlpContract.requestReward(fileId as any, 1 as any);
+      const requestClaimTx = await dlpContract.requestReward(uploadedFileId as any, 1 as any);
       await requestClaimTx.wait();
       console.log("Claim requested successfully");
 
