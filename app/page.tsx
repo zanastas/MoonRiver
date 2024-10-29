@@ -6,7 +6,6 @@ import {
   signMessage,
   uploadFile,
   useConnectWallet,
-  useNetworkStore,
   useStorageStore,
   useWalletStore,
 } from "@/app/core";
@@ -50,7 +49,6 @@ export default function Page() {
   const teePoolContractAddress = config.smartContracts.teePool;
 
   const dropboxToken = useStorageStore((state) => state.token);
-  const publicKeyBase64 = useNetworkStore((state) => state.publicKeyBase64);
   const isDropboxConnected = !!dropboxToken;
 
   const [opened, { close }] = useDisclosure(false);

@@ -112,7 +112,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
 
                     <Menu.Dropdown>
                       <Menu.Label>Network</Menu.Label>
-                      {showInternalFeatures && <Menu.Item
+                      <Menu.Item
                         onClick={() => setNetwork("moksha")}
                         leftSection={
                           network === "moksha" && (
@@ -121,16 +121,6 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                         }
                       >
                         Moksha Testnet
-                      </Menu.Item>}
-                      <Menu.Item
-                        onClick={() => setNetwork("satori")}
-                        leftSection={
-                          network === "satori" && (
-                            <Icon icon="carbon:checkmark" />
-                          )
-                        }
-                      >
-                        Satori Testnet
                       </Menu.Item>
                       <Menu.Item
                         disabled
@@ -193,7 +183,10 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         </Container>
 
         <Center p={"xs"} bg="var(--mantine-color-red-9)">
-          <Text fs={"sm"} c={"white"}>THIS IS A TESTNET. POINTS EARNED ON TESTNET HOLD NO VALUE AND ARE NOT INDICATIVE OF A FUTURE AIRDROP.</Text>
+          <Text fs={"sm"} c={"white"}>
+            THIS IS A TESTNET. POINTS EARNED ON TESTNET HOLD NO VALUE AND ARE
+            NOT INDICATIVE OF A FUTURE AIRDROP.
+          </Text>
         </Center>
       </AppShell.Header>
 

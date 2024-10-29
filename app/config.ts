@@ -6,13 +6,6 @@ const networks = {
     explorerUrl: "https://moksha.vanascan.io",
     currency: "VANA",
   },
-  satori: {
-    chainId: "14801",
-    rpcUrl: "https://rpc.satori.vana.org",
-    chainName: "Vana Satori Testnet",
-    explorerUrl: "https://satori.vanascan.io",
-    currency: "VANA",
-  },
   mainnet: {
     chainId: "1480",
     rpcUrl: "https://rpc.vana.org",
@@ -40,7 +33,6 @@ const config = {
   dropboxFolderName: "data-dao",
   googleDriveFolderName: "data-dao",
   googleClientId: process.env.NEXT_PUBLIC_GOOGLE_DRIVE_CLIENT_ID || "",
-  publicKeyBase64: process.env.NEXT_PUBLIC_FILE_ENCRYPTION_PUBLIC_KEY_BASE64 || "",
   network,
   networkConfig,
   smartContracts: {

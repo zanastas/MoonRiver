@@ -7,10 +7,6 @@ export type Network = keyof typeof networks | string;
 type NetworkState = {
   network: Network;
   setNetwork: (network: Network) => void;
-
-  publicKeyBase64: string;
-  setPublicKeyBase64: (publicKeyBase64: string) => void;
-
   chainId: string;
   rpcUrl: string;
   chainName: string;
@@ -29,13 +25,8 @@ export const useNetworkStore = create<NetworkState>()(
           set({
             network,
             ...networkConfig,
-            publicKeyBase64: config.publicKeyBase64,
           });
         },
-
-        publicKeyBase64: config.publicKeyBase64,
-        setPublicKeyBase64: (publicKeyBase64) => set({ publicKeyBase64 }),
-
         chainId: defaultNetworkConfig.chainId,
         rpcUrl: defaultNetworkConfig.rpcUrl,
         chainName: defaultNetworkConfig.chainName,
