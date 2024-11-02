@@ -13,9 +13,10 @@ const networks = {
     explorerUrl: "https://vanascan.io",
     currency: "VANA",
   },
-}
+};
 
-const network = (process.env.NEXT_PUBLIC_NETWORK || "moksha") as keyof typeof networks;
+const network = (process.env.NEXT_PUBLIC_NETWORK ||
+  "moksha") as keyof typeof networks;
 
 if (!Object.keys(networks).includes(network)) {
   throw new Error(`Invalid network type: ${network}`);
@@ -36,10 +37,16 @@ const config = {
   network,
   networkConfig,
   smartContracts: {
-  dlp: process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_DLP || "0x88006Bc06d3B703a3F50ACe4DEFC587549085940",
-    dataRegistry: process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_DATA_REGISTRY || "0xEA882bb75C54DE9A08bC46b46c396727B4BFe9a5",
-    teePool: process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_TEE_POOL || "0xF084Ca24B4E29Aa843898e0B12c465fAFD089965",
-  }
+    dlp:
+      process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_DLP ||
+      "0x88006Bc06d3B703a3F50ACe4DEFC587549085940",
+    dataRegistry:
+      process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_DATA_REGISTRY ||
+      "0xEA882bb75C54DE9A08bC46b46c396727B4BFe9a5",
+    teePool:
+      process.env.NEXT_PUBLIC_SMART_CONTRACT_ADDRESS_TEE_POOL ||
+      "0xF084Ca24B4E29Aa843898e0B12c465fAFD089965",
+  },
 };
 
 export { config, networks };
