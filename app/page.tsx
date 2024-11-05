@@ -307,8 +307,8 @@ export default function Page() {
           {
             address: contractAddress,
             public_key: publicKey,
-            fixed_iv: fixed_iv.toString('hex'),
-            fixed_ephemeral_key: fixed_ephemeral_key.toString('hex'),
+            iv: fixed_iv.toString('hex'),
+            ephemeral_key: fixed_ephemeral_key.toString('hex'),
           }
         ]
       };
