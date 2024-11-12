@@ -282,10 +282,6 @@ export default function Page() {
       appendStatus(`Job details retrieved for JobID ${latestJobId}`);
 
       console.log("Job Details:", jobDetails);
-      console.log(
-        "TODO: Implement query to TEE Attestation URL:",
-        jobDetails.teeUrl
-      );
 
       appendStatus(`Preparing contribution proof request for TEE`);
 
