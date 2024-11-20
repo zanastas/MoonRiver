@@ -1,0 +1,3 @@
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/zanastas/vana-dlp-smart-contracts.git
