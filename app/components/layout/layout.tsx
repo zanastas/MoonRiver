@@ -24,8 +24,9 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 const links = [
+  { title: "About", href: "/about" },
   { title: "Claim", href: "/claim" },
-  { title: "About", href: "/terms" },
+  { title: "Terms", href: "/terms" },
 ];
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
@@ -98,7 +99,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                 <Flex pos="relative" dir="row" align="center" gap="sm">
                   <Link href="/">
                     <Title order={5} ff="monospace">
-                      DataDAO
+                      Moon River
                     </Title>
                   </Link>
                   <Menu shadow="md" width={250}>
