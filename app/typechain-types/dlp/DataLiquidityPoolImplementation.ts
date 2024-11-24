@@ -61,7 +61,7 @@ export declare namespace DataLiquidityPoolImplementation {
     dataRegistryAddress: AddressLike;
     teePoolAddress: AddressLike;
     name: string;
-    masterKey: string;
+    publicKey: string;
     proofInstruction: string;
     fileRewardFactor: BigNumberish;
   };
@@ -72,7 +72,7 @@ export declare namespace DataLiquidityPoolImplementation {
     dataRegistryAddress: string,
     teePoolAddress: string,
     name: string,
-    masterKey: string,
+    publicKey: string,
     proofInstruction: string,
     fileRewardFactor: bigint
   ] & {
@@ -81,7 +81,7 @@ export declare namespace DataLiquidityPoolImplementation {
     dataRegistryAddress: string;
     teePoolAddress: string;
     name: string;
-    masterKey: string;
+    publicKey: string;
     proofInstruction: string;
     fileRewardFactor: bigint;
   };
@@ -103,7 +103,7 @@ export interface DataLiquidityPoolImplementationInterface extends Interface {
       | "filesListAt"
       | "filesListCount"
       | "initialize"
-      | "masterKey"
+      | "publicKey"
       | "multicall"
       | "name"
       | "owner"
@@ -192,7 +192,7 @@ export interface DataLiquidityPoolImplementationInterface extends Interface {
     functionFragment: "initialize",
     values: [DataLiquidityPoolImplementation.InitParamsStruct]
   ): string;
-  encodeFunctionData(functionFragment: "masterKey", values?: undefined): string;
+  encodeFunctionData(functionFragment: "publicKey", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "multicall",
     values: [BytesLike[]]
@@ -300,7 +300,7 @@ export interface DataLiquidityPoolImplementationInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "initialize", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "masterKey", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "publicKey", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "multicall", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
@@ -612,7 +612,7 @@ export interface DataLiquidityPoolImplementation extends BaseContract {
     "nonpayable"
   >;
 
-  masterKey: TypedContractMethod<[], [string], "view">;
+  publicKey: TypedContractMethod<[], [string], "view">;
 
   multicall: TypedContractMethod<[data: BytesLike[]], [string[]], "nonpayable">;
 
@@ -752,7 +752,7 @@ export interface DataLiquidityPoolImplementation extends BaseContract {
     "nonpayable"
   >;
   getFunction(
-    nameOrSignature: "masterKey"
+    nameOrSignature: "publicKey"
   ): TypedContractMethod<[], [string], "view">;
   getFunction(
     nameOrSignature: "multicall"

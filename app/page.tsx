@@ -211,7 +211,7 @@ export default function Page() {
         signer
       ) as unknown as TeePoolImplementation;
 
-      const publicKey = await dlpContract.masterKey();
+      const publicKey = await dlpContract.publicKey();
       console.log("DLP public Key:", publicKey);
 
       const encryptedKey = await encryptWithWalletPublicKey(signature, publicKey);

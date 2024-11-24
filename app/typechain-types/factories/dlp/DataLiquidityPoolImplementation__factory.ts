@@ -649,7 +649,7 @@ const _abi = [
           },
           {
             internalType: "string",
-            name: "masterKey",
+            name: "publicKey",
             type: "string",
           },
           {
@@ -675,7 +675,7 @@ const _abi = [
   },
   {
     inputs: [],
-    name: "masterKey",
+    name: "publicKey",
     outputs: [
       {
         internalType: "string",
