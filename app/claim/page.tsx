@@ -22,19 +22,19 @@ const instructions = [
     number: 1,
     title: "Connect wallet to create account",
     description:
-      "To create your account, click 'Connect' located at the top right corner of the screen and follow the instructions to connect your wallet.",
+      "Click 'Connect' button at the top right corner of the screen to connect your wallet.",
   },
   {
     number: 2,
-    title: "Follow Your DLP's instructions",
+    title: "Download your menstrual cycle data from Clue App",
     description:
-      "For example, a ChatGPT DLP may ask you to open a new chat in ChatGPT, paste your wallet address into the message box, and send it. Then, request a download of your ChatGPT data.",
+      "To download your Clue data, open the app and navigate to the More Menu (= icon in the top-right of the Cycle View). Go to Settings, tap Download my data, and then Request data. You’ll receive an email with a download link and a password displayed in the app. Use the password to access your data, which will be sent in JSON format. Make sure to download the file within 72 hours.",
   },
   {
     number: 3,
-    title: "Upload data and claim points",
+    title: "Upload data and claim token",
     description:
-      "Submit a data upload transaction here to claim your points",
+      "Submit your data here to claim Moonlight (MOON) token.",
   },
 ];
 
@@ -60,8 +60,8 @@ export default function Page() {
               </Stack>
             ))}
             <Flex justify="flex-end">
-              <Link href="/claim/upload">
-                <Button color="brand-3">Get started</Button>
+              <Link href="/">
+                <Button color="brand-3">Upload Data</Button>
               </Link>
             </Flex>
           </Stack>

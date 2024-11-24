@@ -8,7 +8,7 @@ export default function AboutPage() {
     <Container size="lg">
       <Stack gap="xl">
         <Stack gap="md">
-          <Title order={1}>Moon River - A Period Data Pool for Better Health</Title>
+          <Title order={1}>Moon River - A Period Data Pool for Better Women's Health</Title>
           <Text size="lg">
             Moon River is a Data Liquidity Pool (DLP) built on Vana, a layer-one blockchain designed 
             for the trustless and secure exchange of user-owned data.
@@ -18,9 +18,9 @@ export default function AboutPage() {
         <Stack gap="md">
           <Title order={2}>What's the Problem?</Title>
           <Text>
-            For hundreds of years, women's health—especially menstrual health—hasn't been properly 
-            studied. There's not enough good data about periods, symptoms, and related health issues. 
-            This makes it harder to create better treatments, apps, and tools for women's health.
+            Women's health—especially menstrual health—hasn't been properly 
+            studied. There's not enough good quality data about periods, symptoms, and related health issues. 
+            This makes it harder to create better treatments and tools for women's health.
           </Text>
         </Stack>
 
