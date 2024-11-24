@@ -1,0 +1,36 @@
+.backgroundContainer {
+  min-height: 100vh;
+  padding: 120px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.backgroundImage {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/moonlit-lake.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.6);
+  z-index: -1;
+}
+
+.overlay {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(44, 62, 80, 0.6) 0%, rgba(32, 58, 67, 0.7) 100%);
+  z-index: -1;
+} 

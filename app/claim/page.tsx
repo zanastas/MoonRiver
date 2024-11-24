@@ -9,11 +9,13 @@ import {
   Stack,
   Text,
   Title,
-  Image,
   Box,
   Group,
 } from "@mantine/core";
 import Link from "next/link";
+import { useViewportSize, useWindowScroll } from '@mantine/hooks';
+import styles from './styles.module.css';
+import Image from 'next/image';
 
 const instructions = [
   {
@@ -37,23 +39,34 @@ const instructions = [
 ];
 
 export default function Page() {
+  const [scroll] = useWindowScroll();
+  
   return (
-    <Box
-      style={{
-        background: 'linear-gradient(180deg, #2C3E50 0%, #203A43 100%)',
-        minHeight: '100vh',
-        padding: '40px 0',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 0,
-      }}
-    >
+    <Box className={styles.backgroundContainer}>
+      <div style={{ 
+        position: 'fixed',
+        height: '100vh',
+        width: '100vw',
+        overflow: 'hidden',
+        zIndex: -1,
+      }}>
+        <Image
+          src="/moonlit-lake.jpg"
+          alt="Moonlit lake background"
+          fill
+          style={{ 
+            objectFit: 'cover',
+            transform: `translateY(${scroll.y * -0.3}px)`,
+            filter: 'brightness(0.7)',
+          }}
+          priority
+        />
+      </div>
+      <div className={styles.overlay} />
+      
       <Container pos="relative" style={{ zIndex: 1 }}>
-        <Grid>
-          <Grid.Col span={{ sm: 12, md: 6 }}>
+        <Grid justify="center">
+          <Grid.Col span={{ sm: 12, md: 8, lg: 6 }}>
             <Stack 
               align="stretch" 
               justify="center" 
@@ -61,9 +74,10 @@ export default function Page() {
               style={{
                 position: 'relative',
                 padding: '30px',
-                background: 'rgba(255, 255, 255, 0.03)',
+                background: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '15px',
                 backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
               }}
             >
               <Title 
@@ -159,22 +173,6 @@ export default function Page() {
                 </Link>
               </Flex>
             </Stack>
-          </Grid.Col>
-          <Grid.Col span={5} offset={1} visibleFrom="md">
-            <Image 
-              radius="lg" 
-              src="/images/claim/moonlit-lake.jpg"
-              alt="Moonlit lake with pink full moon reflection"
-              style={{
-                boxShadow: '0 0 30px rgba(255, 158, 177, 0.2)',
-                transition: 'transform 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.02)',
-                },
-                height: '100%',
-                objectFit: 'cover',
-              }}
-            />
           </Grid.Col>
         </Grid>
       </Container>
