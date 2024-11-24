@@ -27,6 +27,7 @@ const links = [
   { title: "About", href: "/about" },
   { title: "Claim", href: "/claim" },
   { title: "Terms", href: "/terms" },
+  { title: "Leaderboard", href: "/leaderboard" },
 ];
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
