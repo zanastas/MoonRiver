@@ -1,27 +1,30 @@
-# Vana DLP UI
-This is a generic UI for uploading data to a Data Liquidity Pool (DLP). This app does the following:
-1. Connect your EVM compatible wallet, which holds some $VANA
-2. On the upload page, log in to your Google Drive or Dropbox
-3. Drag your data in, which is encrypted client-side and stored in your personal storage
-4. A transaction is written on-chain, which the DLP validators will pick up on and verify your file
+# Moon River - A Period Data Pool for Better Women's Health
 
-## Getting Started
-```bash
-# First, install the dependencies
-yarn install
+Moon River is a Data Liquidity Pool (DLP) built on Vana, a layer-one blockchain designed for the trustless and secure exchange of user-owned data.
 
-# Copy .env.example to .env
-cp .env.example .env
+Problem
+Women's health—especially menstrual health—hasn't been properly studied. There's not enough good quality data about periods, symptoms, and related health issues. This makes it harder to create better treatments and tools for women's health.
 
-# Run the development server
-yarn dev
-```
+Our Solution
+We create a safe, private, and rewarding space where women can share their period-related data (e.g. tracking symptoms, cycle patterns, or birth control side effects). This data helps researchers and AI companies create better models, tools and treatments for menstrual health, and contributors get paid every time their data is used.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the app running.
+How It Works
 
-## Client-side encryption
+You Share Your Data Safely
+Use your period-tracking app (like Flo or Clue) to export your data
+Upload it to MoonRiver website through a secure portal
+Your data is encrypted and anonymous—no one can trace it back to you
 
-The Vana network strives to ensure personal data remains private, and is only shared with trusted parties. You can read more about how a DLP uses client-side encryption to protect user data [here](https://docs.vana.org/docs/data-privacy).
+We Check and Protect Your Data
+Your data is double-checked for accuracy and uniqueness by Validators using TEE
+A special process makes sure your data hasn't been tampered with
 
-## Learn more
-You can find out more about building a data liquidity pool with Vana [here](https://docs.vana.org/docs/how-to-create-a-data-liquidity-pool). 
+Your Data Helps Research
+Once your data is approved, it goes into a pool that researchers and companies can access
+They pay to use the data
+
+You Get Paid
+Every time someone uses your data, you earn rewards in Moonlight (MOON) tokens
+You can trade, use, or save them
+
+
