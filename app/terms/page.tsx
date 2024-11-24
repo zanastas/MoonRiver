@@ -3,12 +3,46 @@ import { Container, List, ListItem, Stack, Text, Title } from "@mantine/core";
 export default function Page() {
   return (
     <Container py={{ base: "16", sm: "72" }}>
-      <Stack align="stretch" justify="center" gap="md">
-        <Title order={1}>Data usage & privacy</Title>
-        <Text>Effective Date: 15 May 2024</Text>
+      <Stack align="stretch" justify="center" gap="md" style={{
+        background: 'rgba(13, 22, 55, 0.85)',
+        padding: '40px',
+        borderRadius: '12px',
+        border: '1px solid rgba(142, 199, 255, 0.2)',
+        backdropFilter: 'blur(8px)'
+      }}>
+        <Title order={1} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '2.5rem',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+        }}>
+          Data usage & privacy
+        </Title>
+        
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#B4E4FF',
+          fontSize: '16px'
+        }}>
+          Effective Date: 15 May 2024
+        </Text>
 
-        <Title order={5}>Introduction</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          Introduction
+        </Title>
+        
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           Corsali, Inc. dba Vana (“Vana,” “we,” “us,” or “our”) is developing a
           web3 protocol to enable a decentralized network for user-owned data
           (the “Protocol”). To assist in the development, testing and deployment
@@ -23,8 +57,21 @@ export default function Page() {
           use the Testnet.
         </Text>
 
-        <Title order={5}>Modifications to Terms</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          Modifications to Terms
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           We reserve the right, at our sole discretion, to change or modify
           portions of these Terms of Service at any time. If we do this, we will
           post the changes on this page and will indicate at the top of this
@@ -37,8 +84,21 @@ export default function Page() {
           use (or continue to access, browse, or use) the Testnet.
         </Text>
 
-        <Title order={5}>Important Information</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          Important Information
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           PLEASE READ THESE TERMS OF SERVICE CAREFULLY, AS THEY CONTAIN AN
           AGREEMENT TO ARBITRATE AND OTHER IMPORTANT INFORMATION REGARDING YOUR
           LEGAL RIGHTS, REMEDIES, AND OBLIGATIONS. THE AGREEMENT TO ARBITRATE
@@ -52,8 +112,20 @@ export default function Page() {
           HAVE AGAINST US RESOLVED BY A JURY OR IN A COURT OF LAW.
         </Text>
 
-        <Title order={5}>1. USE OF THE TESTNET</Title>
-        <List withPadding>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          1. USE OF THE TESTNET
+        </Title>
+        <List withPadding style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7
+        }}>
           <ListItem>
             <Text>
               <strong>(a) Access to the Testnet:</strong> Vana is providing the
@@ -160,8 +232,20 @@ export default function Page() {
           </ListItem>
         </List>
 
-        <Title order={5}>2. OWNERSHIP</Title>
-        <List withPadding>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          2. OWNERSHIP
+        </Title>
+        <List withPadding style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7
+        }}>
           <ListItem>
             <Text>
               <strong>(a) Ownership of Vana Content:</strong> The Testnet and
@@ -212,8 +296,21 @@ export default function Page() {
           </ListItem>
         </List>
 
-        <Title order={5}>3. USER CONDUCT</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          3. USER CONDUCT
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           You agree that you are solely responsible for your conduct in
           connection with the Testnet. You agree not to:
           <List>
@@ -261,8 +358,21 @@ export default function Page() {
           </List>
         </Text>
 
-        <Title order={5}>4. INVESTIGATIONS</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          4. INVESTIGATIONS
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           Vana may, but is not obligated to, monitor or review the Testnet and
           your use thereof at any time. Although Vana does not generally monitor
           user activity occurring in connection with the Testnet, if Vana
@@ -272,8 +382,21 @@ export default function Page() {
           terminate your right to use the Testnet without prior notice to you.
         </Text>
 
-        <Title order={5}>5. INDEMNIFICATION</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          5. INDEMNIFICATION
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           You agree to indemnify and hold Vana and its affiliates, officers,
           directors, employees, contractors, agents, and representatives (“Vana
           Parties”) harmless from any losses, costs, liabilities and expenses
@@ -305,8 +428,21 @@ export default function Page() {
           Testnet.
         </Text>
 
-        <Title order={5}>6. DISCLAIMER OF WARRANTIES</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          6. DISCLAIMER OF WARRANTIES
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(a) No Fiduciary Duty:</strong> VANA IS NOT A BROKER,
           FINANCIAL INSTITUTION OR INTERMEDIARY AND IS IN NO WAY YOUR AGENT,
           ADVISOR, OR CUSTODIAN. VANA CANNOT INITIATE A TRANSFER OF ANY OF YOUR
@@ -315,7 +451,12 @@ export default function Page() {
           REGARDING ANY DECISIONS OR ACTIVITIES THAT YOU EFFECT IN CONNECTION
           WITH YOUR USE OF THE TESTNET.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(b) Third Party Transactions:</strong> THE TESTNET MAY PROVIDE
           TECHNICAL MEANS THAT ENABLE YOU TO ENGAGE IN TRANSACTIONS WITH THIRD
           PARTIES. ALL TRANSACTIONS INITIATED THROUGH THE TESTNET ARE EFFECTED
@@ -324,7 +465,12 @@ export default function Page() {
           THE TERMS OF SERVICE AND PRIVACY POLICY AND THAT VANA IS NOT
           RESPONSIBLE FOR ANY SUCH TRANSACTIONS.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(c) General Disclaimer:</strong> YOU EXPRESSLY UNDERSTAND AND
           AGREE THAT TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOUR USE OF THE
           TESTNET IS AT YOUR SOLE RISK, AND THE TESTNET IS PROVIDED ON AN “AS
@@ -349,7 +495,12 @@ export default function Page() {
           WHETHER ORAL OR WRITTEN, OBTAINED FROM VANA OR THROUGH THE TESTNET
           WILL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(d) No Liability for Conduct of Third Parties:</strong> YOU
           ACKNOWLEDGE AND AGREE THAT VANA PARTIES ARE NOT LIABLE, AND YOU AGREE
           NOT TO SEEK TO HOLD VANA PARTIES LIABLE, FOR THE CONDUCT OF THIRD
@@ -363,8 +514,21 @@ export default function Page() {
           THE TESTNET.
         </Text>
 
-        <Title order={5}>7. LIMITATION OF LIABILITY</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          7. LIMITATION OF LIABILITY
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(a) Disclaimer of Certain Damages:</strong> YOU UNDERSTAND AND
           AGREE THAT, TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT SHALL
           VANA PARTIES BE LIABLE FOR ANY LOSS OF PROFITS, ETHEREUM OR OTHER
@@ -385,7 +549,12 @@ export default function Page() {
           CONTRACT, TORT (INCLUDING NEGLIGENCE), PRODUCT LIABILITY OR ANY OTHER
           LEGAL THEORY.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(b) Cap on Liability:</strong> TO THE FULLEST EXTENT PROVIDED
           BY LAW, VANA PARTIES WILL NOT BE LIABLE TO YOU FOR MORE THAN THE
           GREATER OF (I) $100; OR (II) THE REMEDY OR PENALTY IMPOSED BY THE
@@ -394,25 +563,53 @@ export default function Page() {
           INJURY CAUSED BY A VANA PARTY’S NEGLIGENCE; OR FOR (II) ANY INJURY
           CAUSED BY A VANA PARTY’S FRAUD OR FRAUDULENT MISREPRESENTATION.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(c) Exclusion of Damages:</strong> CERTAIN JURISDICTIONS DO
           NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE
           LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE EXCLUSIONS OR LIMITATIONS
           MAY NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(d) Basis of the Bargain:</strong> THE LIMITATIONS OF DAMAGES
           SET FORTH ABOVE ARE FUNDAMENTAL ELEMENTS OF THE BASIS OF THE BARGAIN
           BETWEEN VANA AND YOU.
         </Text>
 
-        <Title order={5}>8. DISPUTE RESOLUTION BY BINDING ARBITRATION</Title>
-        <Text>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          8. DISPUTE RESOLUTION BY BINDING ARBITRATION
+        </Title>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           PLEASE READ THIS ARBITRATION AGREEMENT CAREFULLY. IT REQUIRES YOU TO
           ARBITRATE DISPUTES WITH VANA AND LIMITS THE MANNER IN WHICH YOU CAN
           SEEK RELIEF FROM US.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(a) Governing Law:</strong> These Terms of Service and any
           action related thereto will be governed by the laws of the Cayman
           Islands without regard to its conflict of laws provisions. The
@@ -420,7 +617,12 @@ export default function Page() {
           will be in the Cayman Islands and you and Vana each waive any
           objection to such jurisdiction and venue.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(b) Agreement to Arbitrate:</strong> This Dispute Resolution
           by Binding Arbitration section is referred to in this Agreement as the
           “Arbitration Agreement.” You agree that any and all disputes or claims
@@ -439,7 +641,12 @@ export default function Page() {
           in a class action. Your rights will be determined by a neutral
           arbitrator, not a judge or jury.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>
             (c) Prohibition of Class and Representative Actions and
             Non-Individualized Relief:
@@ -459,7 +666,12 @@ export default function Page() {
           ENFORCEABILITY OF THIS PROVISION.
         </Text>
 
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(d) Pre-Arbitration Dispute Resolution:</strong> Vana is
           always interested in resolving disputes amicably and efficiently, and
           most user concerns can be resolved quickly and to the user’s
@@ -476,7 +688,12 @@ export default function Page() {
           shall not be disclosed to the arbitrator until after the arbitrator
           determines the amount, if any, to which you or Vana is entitled.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(e) Arbitration Procedures:</strong> Arbitration will be
           conducted by a neutral arbitrator in accordance with the Cayman
           International Mediation and Arbitration Centre’s (“CIMAC”) rules and
@@ -503,7 +720,12 @@ export default function Page() {
           made by the CIMAC.
         </Text>
 
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(f) Costs of Arbitration:</strong> Payment of all filing,
           administration, and arbitrator fees (collectively, the “Arbitration
           Fees”) will be governed by the CIMAC Rules, unless otherwise provided
@@ -521,12 +743,22 @@ export default function Page() {
           cost-prohibitive. Any payment of attorneys’ fees will be governed by
           the CIMAC Rules.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(g) Confidentiality:</strong> All aspects of the arbitration
           proceeding, and any ruling, decision, or award by the arbitrator, will
           be strictly confidential for the benefit of all parties.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(h) Severability:</strong> If a court or the arbitrator
           decides that any term or provision of this Arbitration Agreement
           (other than the subsection (c) titled “Prohibition of Class and
@@ -544,7 +776,12 @@ export default function Page() {
           injunctive relief. The remainder of this Agreement will continue to
           apply.
         </Text>
-        <Text>
+        <Text style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7,
+          fontSize: '16px'
+        }}>
           <strong>(i) Future Changes to Arbitration Agreement:</strong>{" "}
           Notwithstanding any provision in this Agreement to the contrary, Vana
           agrees that if it makes any future change to this Arbitration
@@ -558,8 +795,20 @@ export default function Page() {
           this Agreement).
         </Text>
 
-        <Title order={5}>9. MISCELLANEOUS</Title>
-        <List withPadding>
+        <Title order={5} style={{
+          fontFamily: 'Cinzel, serif',
+          color: '#7EE7F3',
+          fontSize: '1.5rem',
+          marginTop: '20px',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+        }}>
+          9. MISCELLANEOUS
+        </Title>
+        <List withPadding style={{
+          fontFamily: 'Quicksand, sans-serif',
+          color: '#E0E7FF',
+          lineHeight: 1.7
+        }}>
           <ListItem>
             <Text>
               <strong>(a) Entire Agreement:</strong> These terms constitute the

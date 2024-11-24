@@ -387,11 +387,32 @@ export default function Page() {
             pt={{ sm: 0, md: 50 }}
             order={{ base: 1, md: 2 }}
           >
-            <Stack gap="md">
-              <Title order={5}>
+            <Stack gap="md" style={{
+              background: 'rgba(13, 22, 55, 0.85)',
+              padding: '40px',
+              borderRadius: '12px',
+              border: '1px solid rgba(142, 199, 255, 0.2)',
+              backdropFilter: 'blur(8px)'
+            }}>
+              <Title order={2} style={{
+                fontFamily: 'Cinzel, serif',
+                color: '#7EE7F3',
+                fontSize: '2rem',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+              }}>
                 Contribute data
               </Title>
-              <span>You can use this example <a href={"/archive.zip"} style={{textDecoration: "underline"}}>archive</a> to test the contribution process.</span>
+              
+              <Text style={{
+                fontFamily: 'Quicksand, sans-serif',
+                color: '#E0E7FF',
+                fontSize: '16px'
+              }}>
+                You can use this example <a href={"/archive.zip"} style={{
+                  color: '#7EE7F3',
+                  textDecoration: "underline"
+                }}>archive</a> to test the contribution process.
+              </Text>
 
               {uploadState === "initial" && !isDropboxConnected && (
                 <ConnectStep />
@@ -425,10 +446,28 @@ export default function Page() {
 
               {statusLog.length > 0 && (
                 <Stack gap="md">
-                  <Title order={6}>Status Log:</Title>
-                  <Paper p="sm">
+                  <Title order={4} style={{
+                    fontFamily: 'Cinzel, serif',
+                    color: '#7EE7F3',
+                    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+                  }}>
+                    Status Log:
+                  </Title>
+                  <Paper p="sm" style={{
+                    background: 'rgba(13, 22, 55, 0.75)',
+                    border: '1px solid rgba(142, 199, 255, 0.2)',
+                    backdropFilter: 'blur(8px)'
+                  }}>
                     {statusLog.map((status, index) => (
-                      <Text key={index} mb={6}>
+                      <Text 
+                        key={index} 
+                        mb={6}
+                        style={{
+                          fontFamily: 'Quicksand, sans-serif',
+                          color: '#E0E7FF',
+                          lineHeight: 1.7
+                        }}
+                      >
                         — {status}
                       </Text>
                     ))}
@@ -436,8 +475,19 @@ export default function Page() {
                 </Stack>
               )}
 
-              <Dialog opened={opened} onClose={close} size="lg" p={0}>
-                <Notification color="red">
+              <Dialog 
+                opened={opened} 
+                onClose={close} 
+                size="lg" 
+                p={0}
+                style={{
+                  background: 'rgba(13, 22, 55, 0.95)',
+                  backdropFilter: 'blur(8px)'
+                }}
+              >
+                <Notification color="red" style={{
+                  fontFamily: 'Quicksand, sans-serif'
+                }}>
                   There was an error trying to encode your file. Please
                   make sure you have a wallet connected and try again.
                 </Notification>

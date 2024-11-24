@@ -6,18 +6,48 @@ import { Icon } from "@iconify/react";
 export default function AboutPage() {
   return (
     <Container size="lg">
-      <Stack gap="xl">
+      <Stack gap="xl" style={{
+        background: 'rgba(13, 22, 55, 0.85)',
+        padding: '40px',
+        borderRadius: '12px',
+        border: '1px solid rgba(142, 199, 255, 0.2)',
+        backdropFilter: 'blur(8px)'
+      }}>
         <Stack gap="md">
-          <Title order={1}>Moon River - A Period Data Pool for Better Women's Health</Title>
-          <Text size="lg">
+          <Title order={1} style={{
+            fontFamily: 'Cinzel, serif',
+            color: '#7EE7F3',
+            fontSize: '2.5rem',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+          }}>
+            Moon River - A Period Data Pool for Better Women's Health
+          </Title>
+          <Text size="lg" style={{
+            fontFamily: 'Quicksand, sans-serif',
+            color: '#E0E7FF',
+            lineHeight: 1.7,
+            fontSize: '20px'
+          }}>
             Moon River is a Data Liquidity Pool (DLP) built on Vana, a layer-one blockchain designed 
             for the trustless and secure exchange of user-owned data.
           </Text>
         </Stack>
 
         <Stack gap="md">
-          <Title order={2}>What's the Problem?</Title>
-          <Text>
+          <Title order={2} style={{
+            fontFamily: 'Cinzel, serif',
+            color: '#7EE7F3',
+            fontSize: '2rem',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+          }}>
+            Problem
+          </Title>
+          <Text style={{
+            fontFamily: 'Quicksand, sans-serif',
+            color: '#E0E7FF',
+            lineHeight: 1.7,
+            fontSize: '20px'
+          }}>
             Women's health—especially menstrual health—hasn't been properly 
             studied. There's not enough good quality data about periods, symptoms, and related health issues. 
             This makes it harder to create better treatments and tools for women's health.
@@ -25,31 +55,50 @@ export default function AboutPage() {
         </Stack>
 
         <Stack gap="md">
-          <Title order={2}>Our Solution</Title>
-          <Text>
-            We create a safe, private, and rewarding space where people can share their period-related 
-            data (like tracking symptoms, cycle patterns, or birth control side effects). This data 
-            helps researchers and businesses create better tools and treatments for menstrual health, 
+          <Title order={2} style={{
+            fontFamily: 'Cinzel, serif',
+            color: '#7EE7F3',
+            fontSize: '2rem',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+          }}>
+            Our Solution
+          </Title>
+          <Text style={{
+            fontFamily: 'Quicksand, sans-serif',
+            color: '#E0E7FF',
+            lineHeight: 1.7,
+            fontSize: '20px'
+          }}>
+            We create a safe, private, and rewarding space where women can share their period-related 
+            data (e.g. tracking symptoms, cycle patterns, or birth control side effects). This data 
+            helps researchers and AI companies create better models, tools and treatments for menstrual health, 
             and contributors get paid every time their data is used.
           </Text>
         </Stack>
 
         <Stack gap="md">
-          <Title order={2}>How It Works</Title>
+          <Title order={2} style={{
+            fontFamily: 'Cinzel, serif',
+            color: '#7EE7F3',
+            fontSize: '2rem',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+          }}>
+            How It Works
+          </Title>
           <Group gap="xl">
             {[
               {
                 title: "You Share Your Data Safely",
                 items: [
                   "Use your period-tracking app (like Flo or Clue) to export your data",
-                  "Upload it to MoonRiver through a secure website",
-                  "Your data stays private and anonymous—no one can trace it back to you"
+                  "Upload it to MoonRiver website through a secure portal",
+                  "Your data is encrypted and anonymous—no one can trace it back to you"
                 ]
               },
               {
                 title: "We Check and Protect Your Data",
                 items: [
-                  "Your data is double-checked for accuracy and uniqueness using smart technology",
+                  "Your data is double-checked for accuracy and uniqueness by Validators using TEE",
                   "A special process makes sure your data hasn't been tampered with"
                 ]
               },
@@ -64,19 +113,32 @@ export default function AboutPage() {
                 title: "You Get Paid",
                 items: [
                   "Every time someone uses your data, you earn rewards in Moonlight (MOON) tokens",
-                  "These tokens are valuable—you can trade, use, or save them"
+                  "You can trade, use, or save them"
                 ]
               }
             ].map((section, i) => (
-              <Paper key={i} shadow="sm" p="md" withBorder>
+              <Paper key={i} shadow="sm" p="md" style={{
+                background: 'rgba(13, 22, 55, 0.75)',
+                border: '1px solid rgba(142, 199, 255, 0.2)',
+                backdropFilter: 'blur(8px)'
+              }}>
                 <Stack gap="sm">
                   <Group>
-                    <ThemeIcon size="lg" radius="xl" color="brand-3">
+                    <ThemeIcon size="lg" radius="xl" color="cyan">
                       <Text fw={700}>{i + 1}</Text>
                     </ThemeIcon>
-                    <Title order={4}>{section.title}</Title>
+                    <Title order={4} style={{
+                      fontFamily: 'Quicksand, sans-serif',
+                      color: '#7EE7F3',
+                      fontSize: '20px',
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+                    }}>{section.title}</Title>
                   </Group>
-                  <List>
+                  <List style={{
+                    fontFamily: 'Quicksand, sans-serif',
+                    color: '#E0E7FF',
+                    lineHeight: 1.7
+                  }}>
                     {section.items.map((item, j) => (
                       <List.Item key={j}>{item}</List.Item>
                     ))}
@@ -85,43 +147,6 @@ export default function AboutPage() {
               </Paper>
             ))}
           </Group>
-        </Stack>
-
-        <Stack gap="md">
-          <Title order={2}>What's Special About It?</Title>
-          <List
-            spacing="sm"
-            icon={
-              <ThemeIcon color="brand-3" size={24} radius="xl">
-                <Icon icon="material-symbols:check-small" width={16} />
-              </ThemeIcon>
-            }
-          >
-            <List.Item><Text fw={700}>Privacy First:</Text> Your data is anonymized and encrypted. Nobody sees your name or personal details.</List.Item>
-            <List.Item><Text fw={700}>You're in Control:</Text> You decide who uses your data and how.</List.Item>
-            <List.Item><Text fw={700}>Get Rewarded:</Text> Unlike big companies that use your data for free, you earn a share of the revenue.</List.Item>
-            <List.Item><Text fw={700}>Help Women's Health:</Text> Your contributions help researchers and companies create tools that actually improve women's health.</List.Item>
-          </List>
-        </Stack>
-
-        <Stack gap="md">
-          <Title order={2}>How Vana Works for You</Title>
-          <List
-            spacing="sm"
-            icon={
-              <ThemeIcon color="brand-3" size={24} radius="xl">
-                <Icon icon="material-symbols:arrow-right" width={16} />
-              </ThemeIcon>
-            }
-          >
-            <List.Item><Text fw={700}>Contribute Data:</Text> Users contribute data to Data Liquidity Pools (DLPs). Contributions range from social media data to IoT and sensor data, all securely stored encrypted off-chain.</List.Item>
-            <List.Item><Text fw={700}>Tokenize:</Text> Validated data is tokenized, enabling secure data usage across different decentralized applications, particularly for AI model development.</List.Item>
-            <List.Item><Text fw={700}>Earn and Govern:</Text> Users gain governance rights in different DLP DAOs, influencing decisions about data use and getting a share of profit when data is used.</List.Item>
-          </List>
-          
-          <Text>
-            Vana leverages blockchain to ensure transparency, security, and decentralization in how data is owned and shared.
-          </Text>
         </Stack>
       </Stack>
     </Container>

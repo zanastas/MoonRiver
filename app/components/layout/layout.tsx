@@ -76,115 +76,165 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <AppShell
-      header={{ height: 72 }}
+      header={{ height: 110 }}
       navbar={{
         width: 300,
         breakpoint: "sm",
         collapsed: { desktop: true, mobile: !sidebarOpened },
       }}
     >
-      <AppShell.Header bg="brand-1">
-        <Container h="100%">
-          <Group h="100%" align="center">
-            <Group justify="space-between" w="100%">
-              <Group>
-                <Burger
-                  opened={sidebarOpened}
-                  onClick={toggleSidebar}
-                  hiddenFrom="sm"
-                  size="sm"
-                  color="brand-4"
-                />
+      <AppShell.Header style={{ 
+        background: 'transparent',
+        border: 'none'
+      }}>
+        <div style={{ 
+          background: 'rgba(13, 22, 55, 0.85)',
+          backdropFilter: 'blur(8px)',
+          borderBottom: '1px solid rgba(142, 199, 255, 0.2)',
+          height: '72px'
+        }}>
+          <Container h="100%">
+            <Group h="100%" align="center">
+              <Group justify="space-between" w="100%">
+                <Group>
+                  <Burger
+                    opened={sidebarOpened}
+                    onClick={toggleSidebar}
+                    hiddenFrom="sm"
+                    size="sm"
+                    color="#B4E4FF"
+                  />
 
-                <Flex pos="relative" dir="row" align="center" gap="sm">
-                  <Link href="/">
-                    <Title order={5} ff="monospace">
-                      Moon River
-                    </Title>
-                  </Link>
-                  <Menu shadow="md" width={250}>
-                    <Menu.Target>
-                      <UnstyledButton>
-                        <Badge color="red" variant="light" size="lg">
-                          {network as string}
-                        </Badge>
-                      </UnstyledButton>
-                    </Menu.Target>
-
-                    <Menu.Dropdown>
-                      <Menu.Label>Network</Menu.Label>
-                      <Menu.Item
-                        onClick={() => setNetwork("moksha")}
-                        leftSection={
-                          network === "moksha" && (
-                            <Icon icon="carbon:checkmark" />
-                          )
-                        }
-                      >
-                        Moksha Testnet
-                      </Menu.Item>
-                      <Menu.Item
-                        disabled
-                        onClick={() => setNetwork("mainnet")}
-                        leftSection={
-                          network === "mainnet" && (
-                            <Icon icon="carbon:checkmark" />
-                          )
-                        }
-                      >
-                        <Group flex="1" gap="xs">
-                          Vana Mainnet
-                          <Badge size="sm" variant="light" color="dark">
-                            Coming Soon
-                          </Badge>
-                        </Group>
-                      </Menu.Item>
-                    </Menu.Dropdown>
-                  </Menu>
-                </Flex>
-
-                <Group ml="lg" gap={0} visibleFrom="sm">
-                  {links.map((link) => (
-                    <Link key={link.href} href={link.href}>
-                      <UnstyledButton
-                        p={12}
-                        c={isActive(link.href) ? "brand-4" : undefined}
-                      >
-                        <Text size="sm" fw="bold">
-                          {link.title}
-                        </Text>
-                      </UnstyledButton>
+                  <Flex pos="relative" dir="row" align="center" gap="sm">
+                    <Link href="/">
+                      <Title order={5} style={{
+                        fontFamily: 'Cinzel, serif',
+                        color: '#7EE7F3',
+                        textShadow: '0 0 10px rgba(126, 231, 243, 0.3)'
+                      }}>
+                        Moon River
+                      </Title>
                     </Link>
-                  ))}
+                    <Menu shadow="md" width={250}>
+                      <Menu.Target>
+                        <UnstyledButton>
+                          <Badge color="cyan" variant="light" size="lg">
+                            {network as string}
+                          </Badge>
+                        </UnstyledButton>
+                      </Menu.Target>
+
+                      <Menu.Dropdown>
+                        <Menu.Label>Network</Menu.Label>
+                        <Menu.Item
+                          onClick={() => setNetwork("moksha")}
+                          leftSection={
+                            network === "moksha" && (
+                              <Icon icon="carbon:checkmark" />
+                            )
+                          }
+                        >
+                          Moksha Testnet
+                        </Menu.Item>
+                        <Menu.Item
+                          disabled
+                          onClick={() => setNetwork("mainnet")}
+                          leftSection={
+                            network === "mainnet" && (
+                              <Icon icon="carbon:checkmark" />
+                            )
+                          }
+                        >
+                          <Group flex="1" gap="xs">
+                            Vana Mainnet
+                            <Badge size="sm" variant="light" color="dark">
+                              Coming Soon
+                            </Badge>
+                          </Group>
+                        </Menu.Item>
+                      </Menu.Dropdown>
+                    </Menu>
+                  </Flex>
+
+                  <Group ml="lg" gap={0} visibleFrom="sm">
+                    {links.map((link) => (
+                      <Link key={link.href} href={link.href}>
+                        <UnstyledButton
+                          p={12}
+                          style={{
+                            color: isActive(link.href) ? '#7EE7F3' : '#B4E4FF',
+                            fontFamily: 'Quicksand, sans-serif',
+                            transition: 'all 0.2s ease',
+                            ':hover': {
+                              textShadow: '0 0 10px rgba(126, 231, 243, 0.5)'
+                            }
+                          }}
+                        >
+                          <Text size="sm" fw="bold">
+                            {link.title}
+                          </Text>
+                        </UnstyledButton>
+                      </Link>
+                    ))}
+                  </Group>
+                </Group>
+
+                <Group>
+                  {walletAddress ? (
+                    <Button
+                      variant="outline"
+                      style={{
+                        borderColor: 'rgba(126, 231, 243, 0.3)',
+                        color: '#7EE7F3',
+                        fontFamily: 'Quicksand, sans-serif',
+                        ':hover': {
+                          borderColor: 'rgba(126, 231, 243, 0.6)',
+                          background: 'rgba(126, 231, 243, 0.1)'
+                        }
+                      }}
+                      onClick={disconnect}
+                    >
+                      Disconnect
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      style={{
+                        borderColor: 'rgba(126, 231, 243, 0.3)',
+                        color: '#7EE7F3',
+                        fontFamily: 'Quicksand, sans-serif',
+                        ':hover': {
+                          borderColor: 'rgba(126, 231, 243, 0.6)',
+                          background: 'rgba(126, 231, 243, 0.1)'
+                        }
+                      }}
+                      onClick={connect}
+                    >
+                      Connect
+                    </Button>
+                  )}
                 </Group>
               </Group>
-
-              <Group>
-                {walletAddress ? (
-                  <Button
-                    variant="outline"
-                    color="brand-3"
-                    onClick={disconnect}
-                  >
-                    Disconnect
-                  </Button>
-                ) : (
-                  <Button
-                    variant="outline"
-                    color="brand-3"
-                    // onClick={handleOpenLogin}
-                    onClick={connect}
-                  >
-                    Connect
-                  </Button>
-                )}
-              </Group>
             </Group>
-          </Group>
-        </Container>
+          </Container>
+        </div>
 
-        <Center p={"xs"} bg="var(--mantine-color-red-9)">
-          <Text fs={"sm"} c={"white"}>
+        <Center p="xs" style={{ 
+          background: 'rgba(13, 22, 55, 0.95)',
+          borderBottom: '1px solid rgba(255, 158, 177, 0.2)',
+          position: 'absolute',
+          bottom: 0,
+          width: '100%'
+        }}>
+          <Text style={{
+            fontSize: '14px',
+            color: '#FF9EB1',
+            fontFamily: 'Quicksand, sans-serif',
+            fontWeight: 600,
+            textAlign: 'center',
+            letterSpacing: '0.02em',
+            textShadow: '0 0 10px rgba(255, 158, 177, 0.3)'
+          }}>
             THIS IS A TESTNET. POINTS EARNED ON TESTNET HOLD NO VALUE AND ARE
             NOT INDICATIVE OF A FUTURE AIRDROP.
           </Text>
