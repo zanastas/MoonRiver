@@ -14,7 +14,6 @@ import {
   Group,
 } from "@mantine/core";
 import Link from "next/link";
-import { Disclaimer } from "./components/disclaimer";
 
 const instructions = [
   {
@@ -81,7 +80,6 @@ export default function Page() {
               >
                 Moon River
               </Title>
-              <Disclaimer />
               {instructions.map((instruction, i) => (
                 <Stack 
                   gap="sm" 
