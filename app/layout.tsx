@@ -11,9 +11,9 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "YOUR DATA DAO",
+  title: "Moon River",
   description:
-    "Join with your data and receive governance rights. Vote to sell the data to AI companies, or vote to delete it if the data provider open sources their models.",
+    "Moon River is a decentralized data liquidity pool that allows users to store and share their data in a secure and private manner.",
 };
 
 export default function RootLayout({
