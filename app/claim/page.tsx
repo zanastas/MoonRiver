@@ -57,12 +57,11 @@ export default function Page() {
           style={{ 
             objectFit: 'cover',
             transform: `translateY(${scroll.y * -0.3}px)`,
-            filter: 'brightness(0.7)',
+            filter: 'brightness(1)',
           }}
           priority
         />
       </div>
-      <div className={styles.overlay} />
       
       <Container pos="relative" style={{ zIndex: 1 }}>
         <Grid justify="center">
@@ -71,14 +70,6 @@ export default function Page() {
               align="stretch" 
               justify="center" 
               gap="xl"
-              style={{
-                position: 'relative',
-                padding: '30px',
-                background: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '15px',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-              }}
             >
               <Title 
                 order={2} 
@@ -88,8 +79,7 @@ export default function Page() {
                   fontSize: '2.5rem',
                   textAlign: 'center',
                   marginBottom: '20px',
-                  position: 'relative',
-                  textShadow: '0 0 20px rgba(255, 158, 177, 0.5)',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                 }}
               >
                 Moon River
@@ -99,12 +89,12 @@ export default function Page() {
                   gap="sm" 
                   key={i}
                   style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    background: 'rgba(26, 32, 44, 0.75)',
                     padding: '25px',
                     borderRadius: '12px',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
-                    position: 'relative',
                     transition: 'transform 0.2s ease',
+                    backdropFilter: 'blur(2px)',
                     '&:hover': {
                       transform: 'translateY(-2px)',
                     }
@@ -117,7 +107,7 @@ export default function Page() {
                         color: '#FF9EB1',
                         fontSize: '42px',
                         fontWeight: 700,
-                        textShadow: '0 0 15px rgba(255, 158, 177, 0.5)',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                       }}
                     >
                       0{instruction.number}
@@ -131,6 +121,7 @@ export default function Page() {
                         fontWeight: 600,
                         marginLeft: '12px',
                         lineHeight: 1.3,
+                        textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
                       }}
                     >
                       {instruction.title}
@@ -140,7 +131,7 @@ export default function Page() {
                     style={{ 
                       fontFamily: 'Quicksand, sans-serif',
                       marginLeft: '54px',
-                      color: '#B8C6DB',
+                      color: '#E0E7FF',
                       lineHeight: 1.7,
                       fontSize: '16px',
                     }}
@@ -154,17 +145,17 @@ export default function Page() {
                   <Button
                     size="lg"
                     style={{
-                      background: 'linear-gradient(135deg, #FF9EB1 0%, #FF6B95 100%)',
+                      background: 'rgba(26, 32, 44, 0.75)',
                       fontFamily: 'Quicksand, sans-serif',
                       fontSize: '18px',
                       fontWeight: 600,
                       padding: '12px 36px',
-                      border: 'none',
+                      border: '1px solid rgba(255, 158, 177, 0.3)',
+                      color: '#FF9EB1',
                       transition: 'all 0.3s ease',
                       '&:hover': {
-                        background: 'linear-gradient(135deg, #FF6B95 0%, #FF4778 100%)',
+                        background: 'rgba(26, 32, 44, 0.85)',
                         transform: 'translateY(-2px)',
-                        boxShadow: '0 4px 20px rgba(255, 158, 177, 0.4)',
                       }
                     }}
                   >
