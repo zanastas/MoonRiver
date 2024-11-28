@@ -47,7 +47,7 @@ We create a safe, private, and rewarding space where women can share their perio
 
 ## 🌸 Proof of Contribution Process for Women's Menstruation Data
 
-To ensure authenticity, contributors upload menstruation tracking data exports from apps like Clue or Flo. 📱 Validators verify the data by comparing its checksum to the checksum provided by the app’s official download mechanism, ensuring no tampering has occurred. Ownership is confirmed through metadata linking the data to the user’s app account, or through simplified methods like email or in-app verification. 
+To ensure authenticity, contributors upload menstruation tracking data exports from apps like Clue or Flo. Validators verify the data by comparing its checksum to the checksum provided by the app’s official download mechanism, ensuring no tampering has occurred. Ownership is confirmed through metadata linking the data to the user’s app account, or through simplified methods like email or in-app verification. 
 
 The quality of the data is assessed based on completeness, consistency, and relevance, ensuring it includes meaningful metrics like cycle dates, symptoms, and health indicators. A unique fingerprinting process prevents duplicates by comparing submissions to existing datasets. If a submission is too similar to previously submitted data, it is flagged and rejected. This streamlined process ensures contributions are authentic, unique, and valuable while maintaining user privacy and data integrity.
 
