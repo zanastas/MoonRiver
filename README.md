@@ -39,5 +39,15 @@ We create a safe, private, and rewarding space where women can share their perio
 - 🌟 100 million Moonlight (MOON) Token were minted (https://moksha.vanascan.io/token/0x624e10d4f4a6F4729D9B6d02a5d89F76A97fa32e) and 1% of which was held by DataLiquidityPoolProxy.
 - 🎉 MOON token was rewarded to user upon uploading a file https://moksha.vanascan.io/tx/0x27097735e662adee914119b24f9f24235ae15775215f577603d9ce30634405a8
 
+## 💰 Tokenomics & Reward Mechanisms
 
+- 🪙 Total Supply: 100 million MOON Tokens.
+- 🌟 Voting Power: Every MOON Token holder has voting rights.
+- 🎁 Rewards: 40% goes to the DLP creator, 20% is distributed to DLP stakers, 40% is shared among MOON Token holders.
+
+## 🌸 Proof of Contribution Process for Women's Menstruation Data
+
+To ensure authenticity, contributors upload menstruation tracking data exports from apps like Clue or Flo. 📱 Validators verify the data by comparing its checksum to the checksum provided by the app’s official download mechanism, ensuring no tampering has occurred. Ownership is confirmed through metadata linking the data to the user’s app account, or through simplified methods like email or in-app verification. 
+
+The quality of the data is assessed based on completeness, consistency, and relevance, ensuring it includes meaningful metrics like cycle dates, symptoms, and health indicators. A unique fingerprinting process prevents duplicates by comparing submissions to existing datasets. If a submission is too similar to previously submitted data, it is flagged and rejected. This streamlined process ensures contributions are authentic, unique, and valuable while maintaining user privacy and data integrity.
 
