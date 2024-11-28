@@ -1,4 +1,4 @@
-# 🌙 Moon River - A Period Data Pool for Better Women's Health
+# 🌙 Moon River - A Period Data Liquidity Pool for Better Women's Health
 
 Moon River is a Data Liquidity Pool (DLP) built on Vana, a layer-one blockchain designed for the trustless and secure exchange of user-owned data.
 
