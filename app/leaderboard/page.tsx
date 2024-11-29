@@ -6,12 +6,10 @@ import {
   Stack,
   Title,
   Table,
-  Text,
   Paper,
 } from "@mantine/core";
-import { useViewportSize } from '@mantine/hooks';
-import Link from 'next/link';
-import Button from '@mantine/core/Button';
+
+
 
 // Mock data for the leaderboard
 const leaderboardData = [
